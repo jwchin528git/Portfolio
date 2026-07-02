@@ -56,19 +56,19 @@ export default function Navbar() {
         >
           <span
             className="toggle-knob"
-            style={{ transform: isDay ? "translateX(54px)" : "translateX(0)" }}
+            style={{ transform: isDay ? "translateX(var(--toggle-shift, 54px))" : "translateX(0)" }}
           />
           <span
             className="toggle-seg"
             style={{ color: isDay ? "var(--dim)" : "var(--accentInk)" }}
           >
-            ☾ NT
+            NT
           </span>
           <span
             className="toggle-seg"
             style={{ color: isDay ? "var(--accentInk)" : "var(--dim)" }}
           >
-            DAY ☀
+            DAY
           </span>
         </button>
       </div>

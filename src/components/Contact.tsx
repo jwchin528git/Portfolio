@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section" style={{ padding: "80px 48px 40px" }}>
+    <section id="contact" className="section contact-section">
       <Reveal className="contact-card">
         <div className="contact-inner">
           <div className="contact-kicker">Open transmission</div>
