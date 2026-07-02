@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Reveal from "./Reveal";
 import ImageSlot from "./ImageSlot";
 
@@ -187,7 +188,7 @@ function ProjectGallery({
 
   if (!activeImage) return null;
 
-  return (
+  return createPortal(
     <div className="gallery-modal" role="dialog" aria-modal="true" aria-label={`${project.title} gallery`}>
       <button className="gallery-backdrop" type="button" aria-label="Close gallery" onClick={onClose} />
       <div className="gallery-shell">
@@ -228,7 +229,8 @@ function ProjectGallery({
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
